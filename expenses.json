@@ -1,0 +1,21 @@
+[
+    {
+        "date": "2024-11-01",
+        "category": "Groceries",
+        "amount": "1500.00",
+        "description": "Weekly grocery shopping"
+    },
+    {
+        "date": "2024-11-03",
+        "category": "Dining",
+        "amount": "800.00",
+        "description": "Dinner at restaurant"
+    },
+    {
+        "date": "2024-11-05",
+        "category": "Utilities",
+        "amount": "2000.00",
+        "description": "Electricity bill payment"
+    }
+ ]
+ 

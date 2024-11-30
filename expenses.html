@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FinanceFlow - Expenses</title>
+    <link rel="stylesheet" href="expenses.css">
+    <link rel="stylesheet" href="header.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header class="header">
+        <div class="logo">
+            <a href="index.html">
+                <img src="images/logo.png" alt="FinanceFlow Logo">
+            </a>
+        </div>
+        <nav class="navbar">
+            <a href="dashboard.html" class="nav-btn">Dashboard</a>
+            <a href="overview.html" class="nav-btn">Overview</a>
+            <a href="expenses.html" class="nav-btn active">Expenses</a>
+            <a href="goals.html" class="nav-btn">Goals</a>
+            <a href="bills.html" class="nav-btn">Bills</a>
+            <a href="income.html" class="nav-btn">Income</a>
+            <a href="report.html" class="nav-btn">Report</a>
+            <a href="analytics.html" class="nav-btn">Analytics</a>
+        </nav>
+        <div class="header-icons">
+            <a href="notification.html"><img src="images/notification.png" alt="Notifications" class="icon"></a>
+            <a href="profile.html"><img src="images/profile.png" alt="Profile" class="icon"></a>
+        </div>
+    </header>
+
+    <!-- Main Layout -->
+    <div class="dashboard-container">
+        <div class="main-content">
+            <h1 class="page-title">Expenses</h1>
+
+            <!-- Expenses Table -->
+            <section class="expenses-table-section">
+                <h2>Expenses List</h2>
+
+                <!-- Sort Dropdown -->
+                <div class="sort-dropdown">
+                    <label for="sortOptions">Sort By:</label>
+                    <select id="sortOptions">
+                        <option value="dateAsc">Date (Ascending)</option>
+                        <option value="dateDesc">Date (Descending)</option>
+                        <option value="categoryAsc">Category (A-Z)</option>
+                        <option value="categoryDesc">Category (Z-A)</option>
+                        <option value="amountAsc">Amount (Low to High)</option>
+                        <option value="amountDesc">Amount (High to Low)</option>
+                    </select>
+                </div>
+
+                <table id="expensesTable">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Category</th>
+                            <th>Amount (₹)</th>
+                            <th>Description</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Table rows populated by JavaScript -->
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- Add Expense Form -->
+            <section class="add-expense-section">
+                <h2>Add New Expense</h2>
+                <form id="addExpenseForm">
+                    <div class="form-group">
+                        <label for="expenseDate">Date:</label>
+                        <input type="date" id="expenseDate" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="expenseCategory">Category:</label>
+                        <select id="expenseCategory" required>
+                            <option value="">Select Category</option>
+                            <option value="Groceries">Groceries</option>
+                            <option value="Dining">Dining</option>
+                            <option value="Utilities">Utilities</option>
+                            <option value="Entertainment">Entertainment</option>
+                            <option value="Transportation">Transportation</option>
+                            <option value="Health">Health</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="expenseAmount">Amount (₹):</label>
+                        <input type="number" id="expenseAmount" step="0.01" min="0" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="expenseDescription">Description:</label>
+                        <input type="text" id="expenseDescription" placeholder="Optional">
+                    </div>
+                    <button type="submit" class="add-btn">Add Expense</button>
+                </form>
+            </section>
+
+            <!-- Filters Section -->
+            <section class="filters-section">
+                <h2>Filter Expenses</h2>
+                <div class="filters">
+                    <div class="filter-group">
+                        <label for="filterCategory">Category:</label>
+                        <select id="filterCategory">
+                            <option value="All">All</option>
+                            <option value="Groceries">Groceries</option>
+                            <option value="Dining">Dining</option>
+                            <option value="Utilities">Utilities</option>
+                            <option value="Entertainment">Entertainment</option>
+                            <option value="Transportation">Transportation</option>
+                            <option value="Health">Health</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="filterStartDate">Start Date:</label>
+                        <input type="date" id="filterStartDate">
+                    </div>
+                    <div class="filter-group">
+                        <label for="filterEndDate">End Date:</label>
+                        <input type="date" id="filterEndDate">
+                    </div>
+                    <div class="filter-group buttons-group">
+                        <button id="applyFilters" class="filter-btn">Apply Filters</button>
+                        <button id="resetFilters" class="filter-btn">Reset</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Summary Section -->
+            <section class="summary-section">
+                <h2>Expense Summary</h2>
+                <div class="summary-cards">
+                    <div class="summary-card">
+                        <h3>Total Expenses</h3>
+                        <p id="totalExpenses">₹0.00</p>
+                    </div>
+                    <div class="summary-card">
+                        <h3>Highest Expense</h3>
+                        <p id="highestExpense">₹0.00</p>
+                    </div>
+                    <div class="summary-card">
+                        <h3>Average Expense</h3>
+                        <p id="averageExpense">₹0.00</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script src="expenses.js"></script>
+</body>
+</html>

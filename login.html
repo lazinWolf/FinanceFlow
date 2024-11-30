@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="login.css"> <!-- Your existing CSS -->
+</head>
+<body>
+    <div class="container">
+        <div class="login-form">
+            <a href="index.html"><img src="images/logo.png" alt="Logo" class="logo"></a>
+            <h2>Login</h2>
+            <p>Doesn't have an account yet? <a href="signup.html" class="link">Sign Up</a></p>
+            <form id="loginForm">
+                <label for="email">Email Address</label>
+                <input id="email" placeholder="you@example.com" type="email" required/>
+                
+                <label for="password">Password</label>
+                <input id="password" placeholder="Enter 6 characters or more" type="password" required/>
+                
+                <a class="forgot-password link" href="#">Forgot Password?</a>
+                
+                <div style="margin-bottom: 20px;">
+                    <input id="remember" type="checkbox" />
+                    <label for="remember" style="display: inline;">Remember me</label>
+                </div>
+                
+                <!-- Change the button type to 'button' to prevent form submission -->
+                <button type="button" id="loginButton">LOGIN</button>
+            </form>
+        </div>
+        <div class="illustration"></div>
+    </div>
+
+    <!-- Popup -->
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="popup-close" onclick="closePopup()">×</span>
+            <p id="popupMessage">Login Successful!</p>
+        </div>
+    </div>
+
+    <script src="login.js"></script> 
+</body>
+</html>

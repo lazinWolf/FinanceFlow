@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #a95da3cc; /* Slight transparency */
+    border-bottom: 1px solid #ddd;
+    font-family: "Lato", sans-serif;
+}
+
+.logo img {
+    height: 50px;
+    transition: opacity 0.3s,transform 0.2s;
+}
+
+.navbar {
+    display: flex;
+    gap: 15px;
+}
+
+.nav-btn {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 16px;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 10px 12px;
+    transition: color 0.3s;
+}
+
+.nav-btn:hover {
+    color: black;
+}
+
+.nav-btn.active {
+    border-bottom: 2px solid #ffffff;
+    color: white;
+}
+
+.header-icons {
+    display: flex;
+    align-items: center;
+}
+
+.header-icons .icon {
+    height: 40px;
+    margin-left: 20px;
+    cursor: pointer;
+    transition: opacity 0.3s, transform 0.2s;
+    vertical-align: middle;
+}
+
+.header-icons .n {
+    height: 45px;
+}
+
+.header-icons .p {
+    height: 40px;
+}
+
+.header-icons .icon:hover, .logo img:hover {
+    opacity: 0.8;
+    transform: scale(1.05);
+}

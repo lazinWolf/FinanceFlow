@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FinanceFlow - Income</title>
+    <link rel="stylesheet" href="income.css">
+    <link rel="stylesheet" href="header.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header class="header">
+        <div class="logo">
+            <a href="index.html">
+                <img src="images/logo.png" alt="FinanceFlow Logo">
+            </a>
+        </div>
+        <nav class="navbar">
+            <a href="dashboard.html" class="nav-btn">Dashboard</a>
+            <a href="overview.html" class="nav-btn">Overview</a>
+            <a href="expenses.html" class="nav-btn">Expenses</a>
+            <a href="goals.html" class="nav-btn">Goals</a>
+            <a href="bills.html" class="nav-btn">Bills</a>
+            <a href="income.html" class="nav-btn active">Income</a>
+            <a href="report.html" class="nav-btn">Report</a>
+            <a href="analytics.html" class="nav-btn">Analytics</a> <!-- Example of active class -->
+        </nav>
+        <div class="header-icons">
+            <a href="notification.html"><img src="images/notification.png" alt="Notifications" class="icon n"></a>
+            <a href="profile.html"><img src="images/profile.png" alt="Profile" class="icon p"></a>
+        </div>
+    </header>
+
+    <!-- Main Layout -->
+    <div class="dashboard-container">
+        <div class="main-content">
+            <h1 class="page-title">Income Management</h1>
+
+            <!-- Income Summary Section -->
+            <section class="income-summary-section">
+                <h2>Income Summary</h2>
+                <div class="summary-cards">
+                    <div class="summary-card">
+                        <h3>Total Monthly Income</h3>
+                        <p>$5,000</p>
+                    </div>
+                    <div class="summary-card">
+                        <h3>Total Yearly Income</h3>
+                        <p>$60,000</p>
+                    </div>
+                    <div class="summary-card">
+                        <h3>Top Income Source</h3>
+                        <p>Freelance Projects</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Income Sources Table -->
+            <section class="income-sources-section">
+                <h2>Your Income Sources</h2>
+                <table id="incomeTable">
+                    <thead>
+                        <tr>
+                            <th>Source Name</th>
+                            <th>Amount ($)</th>
+                            <th>Frequency</th>
+                            <th>Last Received</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Freelance Projects</td>
+                            <td>2000.00</td>
+                            <td>Monthly</td>
+                            <td>Oct 30, 2024</td>
+                            <td><button class="edit-btn">Edit</button> <button class="delete-btn">Delete</button></td>
+                        </tr>
+                        <tr>
+                            <td>Part-time Job</td>
+                            <td>1000.00</td>
+                            <td>Weekly</td>
+                            <td>Oct 29, 2024</td>
+                            <td><button class="edit-btn">Edit</button> <button class="delete-btn">Delete</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- Add New Income Source Section -->
+            <section class="add-income-section">
+                <h2>Add New Income Source</h2>
+                <form id="addIncomeForm">
+                    <div class="form-group">
+                        <label for="incomeName">Source Name:</label>
+                        <input type="text" id="incomeName" name="incomeName" placeholder="e.g., Freelance Work" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="amount">Amount ($):</label>
+                        <input type="number" id="amount" name="amount" step="0.01" min="0" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="frequency">Frequency:</label>
+                        <select id="frequency" name="frequency">
+                            <option value="one time">One Time</option>
+                            <option value="weekly">Weekly</option>
+                            <option value="monthly">Monthly</option>
+                            <option value="yearly">Yearly</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="startDate">Start Date:</label>
+                        <input type="date" id="startDate" name="startDate" required>
+                    </div>
+                    <button type="submit" class="add-btn">Add Income</button>
+                </form>
+            </section>
+        </div>
+    </div>
+
+</body>
+</html>

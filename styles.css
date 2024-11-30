@@ -1,0 +1,322 @@
+/* Reset default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #ffffff;
+    color: #000000;
+}
+
+/* Header Styling */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #a95da3cc; /* Slight transparency for background */
+    border-bottom: 1px solid #ddd;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo img {
+    height: 50px;
+    transition: opacity 0.3s,transform 0.2s;
+}
+
+.logo img:hover{
+    opacity: 0.8;
+    transform: scale(1.05);
+}
+
+.navbar {
+    display: flex;
+    gap: 15px;
+}
+
+.nav-btn.white {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 16px;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 8px 12px;
+    transition: color 0.3s;
+}
+
+.nav-btn.white:hover {
+    color: black;
+}
+
+.header-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.black {
+    color: white;
+    background-color: black;
+    padding: 7px 15px;
+    border: none;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-decoration: none;
+}
+
+.black:hover {
+    background-color: #00000099;
+}
+
+/* Additional Styling for Divider */
+.divider {
+    width: 90%;
+    margin: 10px auto;
+    border: none;
+    border-top: 2px solid #dddddd;
+}
+
+/* Content Section */
+.content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px 5%;
+}
+
+.intro-text {
+    max-width: 500px;
+    text-align: center;
+}
+
+.intro-text h1 {
+    font-family: "Jura", sans-serif;
+    font-size: 42px;
+    margin-bottom: 10px;
+    line-height: 1.2;
+    font-weight: bold;
+}
+
+.intro-text p {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.intro-text a {
+    color: #DDA0DD;
+    text-decoration: none;
+    transition: color 0.3s, text-decoration 0.3s;
+}
+
+.intro-text a:hover {
+    color: #333;
+    text-decoration: underline;
+}
+
+.flow-text {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+/* CTA Button with Hover Effect */
+.cta-button {
+    background-color: black;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #333;
+    transform: scale(1.05);
+}
+
+/* Image Styling */
+.image-container {
+    max-width: 600px;
+}
+
+.home-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* About Section */
+.about {
+    padding: 40px 5%;
+    text-align: center;
+    background-color: #f1f1f1;
+}
+
+.about h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.about p {
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Features Section */
+.features {
+    padding: 40px 5%;
+    text-align: center;
+    background-image: linear-gradient(to bottom, #f1f1f1, #f9daff);
+
+}
+
+.features h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.feature-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.feature-item {
+    width: 45%;
+    background-image: linear-gradient(to bottom right,rgba(230, 100, 100, 0.8), rgba(145, 152, 229,0.8));
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.feature-item:hover {
+    transform: scale(1.02);
+}
+
+.feature-item h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.feature-item p {
+    font-size: 16px;
+}
+
+/* Testimonials Section */
+.testimonials {
+    padding: 40px 5%;
+    text-align: center;
+    background-image: linear-gradient(to top, #f1f1f1, #f9daff);
+}
+
+.testimonial-item.t1{
+    background-image: linear-gradient(to bottom right, rgba(207, 177, 244, 0.9), rgba(183, 206, 246, 0.9));
+}
+
+.testimonial-item.t2{
+    background-image: linear-gradient(to bottom left, rgba(207, 177, 244, 0.9), rgba(183, 206, 246, 0.9));
+}
+
+.testimonials h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.testimonial-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.testimonial-item {
+    /* background-image: linear-gradient(to bottom right, rgba(207, 177, 244, 0.9), rgba(183, 206, 246, 0.9)); */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    transition: transform 0.3s;
+}
+
+.testimonial-item:hover {
+    transform: translateY(-5px);
+}
+
+.testimonial-item p {
+    font-size: 16px;
+    margin-bottom: 10px;
+    font-style: italic;
+}
+
+.testimonial-item span {
+    font-size: 14px;
+    color: #555;
+}
+
+/* Call to Action Section */
+.cta-section {
+    padding: 40px 5%;
+    text-align: center;
+    background-color: #DDA0DD;
+    color: #fff;
+}
+
+.cta-section h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.cta-section button {
+    padding: 10px 20px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.cta-section button:hover {
+    background-color: #333;
+}
+
+/* Footer */
+.footer {
+    padding: 20px;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+}
+
+.footer p {
+    margin-bottom: 10px;
+}
+
+.social-media a {
+    margin: 0 5px;
+    display: inline-block;
+}
+
+.social-media img {
+    filter: invert(1);
+    height: 20px;
+}
+
+.intro-text .link, .footer a, .social-media a {
+    transition: color 0.3s, transform 0.2s;
+}
+
+.intro-text .link:hover, .footer a:hover, .social-media a:hover {
+    color: #666;
+    transform: scale(1.05);
+}

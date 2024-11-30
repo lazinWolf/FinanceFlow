@@ -1,0 +1,195 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: url("images/support-bg.png");
+    background-size: cover;
+    background-position: center;
+}
+
+/* Header Styling */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #a95da3cc; /* Slight transparency for background */
+    border-bottom: 1px solid #ddd;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo img {
+    height: 50px;
+    transition: opacity 0.3s,transform 0.2s;
+}
+
+.logo img:hover{
+    opacity: 0.8;
+    transform: scale(1.05);
+}
+
+.navbar {
+    display: flex;
+    gap: 15px;
+}
+
+.nav-btn.white {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 16px;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 8px 12px;
+    transition: color 0.3s;
+}
+
+.nav-btn.white:hover {
+    color: black;
+}
+
+.header-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.black {
+    color: white;
+    background-color: black;
+    padding: 7px 15px;
+    border: none;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-decoration: none;
+}
+
+.black:hover {
+    background-color: #00000099;
+}
+
+/* Additional Styling for Divider */
+.divider {
+    width: 90%;
+    margin: 10px auto;
+    border: none;
+    border-top: 2px solid #dddddd;
+}
+
+/* Support Page Layout */
+.support-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh; /* Centers content vertically within the viewport */
+    padding: 30px;
+    gap: 30px;
+}
+
+.support-left, .support-right {
+    width: 40%; /* Reduced width to create more space */
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+}
+
+.support-left:hover, .support-right:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+/* Left Section Styling */
+.support-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+}
+
+.support-left h2 {
+    color: #333;
+    margin-bottom: 15px;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.help-topics {
+    list-style: none;
+    padding: 0;
+    margin-top: 0px;
+}
+
+.help-topics li {
+    margin: 8px 0;
+}
+
+.help-topics a {
+    text-decoration: none;
+    color: #A95DA3;
+    font-size: 18px;
+}
+
+.support-left h2{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* Right Section Styling */
+.support-right h2 {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.contact-methods {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-item h3 {
+    font-size: 18px;
+    color: #555;
+}
+
+.contact-btn {
+    background-color: #A95DA3;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.contact-item form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contact-item input, .contact-item textarea {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .support-container {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .support-left, .support-right {
+        width: 80%; /* Increase width for smaller screens */
+    }
+}

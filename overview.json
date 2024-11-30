@@ -1,0 +1,66 @@
+{
+  "header": {
+    "logoSrc": "images/logo.png",
+    "navLinks": [
+      {"href": "dashboard.html", "text": "Dashboard"},
+      {"href": "overview.html", "text": "Overview", "active": true},
+      {"href": "expenses.html", "text": "Expenses"},
+      {"href": "goals.html", "text": "Goals"},
+      {"href": "bills.html", "text": "Bills"},
+      {"href": "income.html", "text": "Income"},
+      {"href": "report.html", "text": "Report"},
+      {"href": "analytics.html", "text": "Analytics"}
+    ],
+    "notificationIcon": "images/notification.png",
+    "profileIcon": "images/profile.png"
+  },
+  "pageContent": {
+    "title": "FinanceFlow - Overview",
+    "pageTitle": "Overview",
+    "summary": [
+      {"title": "Net Worth", "value": "₹2,075,000", "class": "card-balance"},
+      {"title": "Net Gain/Loss (This Month)", "value": "+ ₹58,100", "class": "card-income"},
+      {"title": "Credit Utilization", "value": "45%", "class": "card-credit"}
+    ],
+    "insights": [
+      {
+        "title": "Top Spending Categories",
+        "items": [
+          "Groceries - ₹16,600",
+          "Dining - ₹9,960",
+          "Utilities - ₹7,470"
+        ],
+        "class": "top-spending-categories"
+      },
+      {
+        "title": "Goals Overview",
+        "items": [
+          "Emergency Fund - 50% completed",
+          "Vacation Fund - 30% completed"
+        ],
+        "class": "goals-summary"
+      },
+      {
+        "title": "Savings Growth",
+        "items": [
+          {"label": "Current Month", "value": "₹99,600"},
+          {"label": "Last Month", "value": "₹87,150"},
+          {"label": "Yearly Average", "value": "₹91,300"}
+        ],
+        "growth": "+14%",
+        "class": "savings-growth"
+      }
+    ]
+  },
+  "charts": {
+    "financialHealth": {
+      "labels": ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
+      "income": [150000, 160000, 155000, 165000, 170000, 180000],
+      "expenses": [120000, 125000, 130000, 135000, 140000, 145000]
+    },
+    "financialOverview": {
+      "labels": ["Savings", "Expenses", "Investments", "Debt Repayment"],
+      "data": [40, 35, 15, 10]
+    }
+  }
+}

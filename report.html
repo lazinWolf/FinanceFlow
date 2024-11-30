@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FinanceFlow - Report</title>
+    <link rel="stylesheet" href="report.css">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrQkTyUG3eDBVxqPz47mQxrLEgXh3uM8sqg6kzLMbW3Fb4C35iRvtO8k/0L0kF4kSxW/ZCF7U/ZZ9PAx1g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header class="header">
+        <div class="logo">
+            <a href="index.html">
+                <img src="images/logo.png" alt="FinanceFlow Logo">
+            </a>
+        </div>
+        <nav class="navbar">
+            <a href="dashboard.html" class="nav-btn">Dashboard</a>
+            <a href="overview.html" class="nav-btn">Overview</a>
+            <a href="expenses.html" class="nav-btn">Expenses</a>
+            <a href="goals.html" class="nav-btn">Goals</a>
+            <a href="bills.html" class="nav-btn">Bills</a>
+            <a href="income.html" class="nav-btn">Income</a>
+            <a href="report.html" class="nav-btn active">Report</a>
+            <a href="analytics.html" class="nav-btn">Analytics</a> <!-- Example of active class -->
+        </nav>
+        <div class="header-icons">
+            <a href="notification.html"><img src="images/notification.png" alt="Notifications" class="icon n"></a>
+            <a href="profile.html"><img src="images/profile.png" alt="Profile" class="icon p"></a>
+        </div>
+    </header>
+
+    <!-- Main Content Section -->
+    <div class="report-container">
+        <h1 class="page-title">Monthly & Yearly Report</h1>
+
+        <!-- Date Selection -->
+        <div class="date-selection">
+            <label for="period-type">Select Period:</label>
+            <select id="period-type">
+                <option value="monthly">Monthly</option>
+                <option value="yearly">Yearly</option>
+            </select>
+            <label for="time-frame">Select Timeframe:</label>
+            <select id="time-frame">
+                <option value="current">Current</option>
+                <option value="previous">Previous</option>
+            </select>
+        </div>
+
+        <!-- Summary Section -->
+        <section class="summary-section">
+            <h2>Report Summary</h2>
+            <div class="summary-cards">
+                <div class="summary-card">
+                    <h3>Total Income</h3>
+                    <p>$4,000</p>
+                </div>
+                <div class="summary-card">
+                    <h3>Total Expenses</h3>
+                    <p>$2,500</p>
+                </div>
+                <div class="summary-card">
+                    <h3>Goals Progress</h3>
+                    <p>80% Achieved</p>
+                </div>
+                <div class="summary-card">
+                    <h3>Total Bills Paid</h3>
+                    <p>$1,200</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Category Breakdown Section (2x2 Layout) -->
+        <section class="category-breakdown">
+            <div class="category-card">
+                <h3>Income Details</h3>
+                <ul>
+                    <li>Salary: $3,000</li>
+                    <li>Freelancing: $700</li>
+                    <li>Investments: $300</li>
+                </ul>
+                <p>Overall income breakdown for current period.</p>
+            </div>
+            <div class="category-card">
+                <h3>Expenses Breakdown</h3>
+                <ul>
+                    <li>Housing: $1,000</li>
+                    <li>Food & Groceries: $500</li>
+                    <li>Utilities: $200</li>
+                    <li>Transportation: $150</li>
+                    <li>Others: $650</li>
+                </ul>
+                <p>Major spending categories this period.</p>
+            </div>
+            <div class="category-card">
+                <h3>Goals Overview</h3>
+                <ul>
+                    <li>Emergency Fund: 75% completed</li>
+                    <li>Travel Savings: 60% completed</li>
+                    <li>New Car: 30% completed</li>
+                </ul>
+                <p>Progress toward each financial goal.</p>
+            </div>
+            <div class="category-card">
+                <h3>Bills Summary</h3>
+                <ul>
+                    <li>Rent: Paid</li>
+                    <li>Internet: Paid</li>
+                    <li>Electricity: Upcoming</li>
+                    <li>Subscription Services: Paid</li>
+                </ul>
+                <p>Status of recurring bills for this period.</p>
+            </div>
+        </section>
+
+        <!-- Graph Section -->
+        <section class="graph-section">
+            <div class="graph-container">
+                <h3>Income vs Expenses Comparison</h3>
+                <p>(Graph Placeholder) A bar graph showing income vs expenses over time.</p>
+            </div>
+            <div class="graph-container">
+                <h3>Goal Completion vs Bills Paid</h3>
+                <p>(Graph Placeholder) A line chart comparing goal completion rates with bill payment statuses.</p>
+            </div>
+        </section>
+    </div>
+
+</body>
+</html>

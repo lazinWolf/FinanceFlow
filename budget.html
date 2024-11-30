@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FinanceFlow - Budget</title>
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="budget.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="logo">
+            <a href="index.html">
+                <img src="images/logo.png" alt="FinanceFlow Logo">
+            </a>
+        </div>
+        <nav class="navbar">
+            <a href="dashboard.html" class="nav-btn">Dashboard</a>
+            <a href="overview.html" class="nav-btn">Overview</a>
+            <a href="expenses.html" class="nav-btn">Expenses</a>
+            <a href="goals.html" class="nav-btn">Goals</a>
+            <a href="bills.html" class="nav-btn">Bills</a>
+            <a href="income.html" class="nav-btn">Income</a>
+            <a href="report.html" class="nav-btn">Report</a>
+            <a href="analytics.html" class="nav-btn">Analytics</a> <!-- Example of active class -->
+        </nav>
+        <div class="header-icons">
+            <a href="notification.html"><img src="images/notification.png" alt="Notifications" class="icon n"></a>
+            <a href="profile.html"><img src="images/profile.png" alt="Profile" class="icon p"></a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="budget-container">
+        <!-- Budget Overview Section -->
+        <section class="budget-overview">
+            <h2>Budget Overview</h2>
+            <div class="overview-cards">
+                <div class="card">
+                    <h3>Total Budget</h3>
+                    <p>$5,000</p>
+                </div>
+                <div class="card">
+                    <h3>Used Budget</h3>
+                    <p>$2,500</p>
+                </div>
+                <div class="card">
+                    <h3>Remaining Budget</h3>
+                    <p>$2,500</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Category Budget Table Section -->
+        <section class="category-budget">
+            <h2>Category Budgets</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Category</th>
+                        <th>Budget Limit</th>
+                        <th>Amount Spent</th>
+                        <th>Remaining</th>
+                        <th>Reminder</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Food</td>
+                        <td>$500</td>
+                        <td>$250</td>
+                        <td>$250</td>
+                        <td>50%, 75%, 90%, 100%</td>
+                    </tr>
+                    <!-- Additional rows can be added as needed -->
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Add Budget Form -->
+        <section class="add-budget">
+            <h2>Add or Adjust Category Budget</h2>
+            <form>
+                <input type="text" placeholder="Category" required>
+                <input type="number" placeholder="Budget Limit" required>
+                <label>Reminder Alerts:</label>
+                <div class="reminder-checkboxes">
+                    <label><input type="checkbox" name="reminder" value="50"> 50%</label>
+                    <label><input type="checkbox" name="reminder" value="75"> 75%</label>
+                    <label><input type="checkbox" name="reminder" value="90"> 90%</label>
+                    <label><input type="checkbox" name="reminder" value="100"> 100%</label>
+                </div>
+                <button type="submit">Set Budget</button>
+            </form>
+        </section>
+    </div>
+</body>
+</html>

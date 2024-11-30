@@ -1,0 +1,141 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    background: linear-gradient(to bottom, rgba(255, 199, 251, 0.5), rgba(113, 68, 110, 0.9));
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Main Container Layout */
+.main-container {
+    display: flex;
+    padding: 20px;
+    gap: 20px;
+    max-width: 1000px; /* Increase max-width */
+    width: 90%; /* Increase width */
+    margin: 0 auto;
+}
+
+/* Profile Sidebar */
+.profile-sidebar {
+    background-color: rgba(140, 82, 138, 0.8);
+    width: 250px;
+    padding: 20px;
+    border-radius: 10px;
+    color: black;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.profile-photo img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}
+
+.user-details p {
+    margin: 10px 0;
+    text-align: left;
+}
+
+.edit-profile-btn {
+    background-color: transparent;
+    color: black;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+/* Main Content */
+.main-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.financial-overview h2,
+.account-info h2,
+.account-settings h2 {
+    margin-bottom: 15px;
+    font-size: 22px;
+}
+
+.overview-cards {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.overview-cards button{
+    padding: 12px 12px;
+    border:none;
+}
+
+.card {
+    flex: 1;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+}
+
+.expense-summary { background-color: #FF6F61; }
+.savings-goals { background-color: #FFB347; }
+.budget { background-color: #77DD77; }
+.upcoming-bills { background-color: #89CFF0; }
+
+/* Account Info and Settings Section */
+.account-info-settings {
+    display: flex;
+    gap: 20px;
+    flex-grow: 1;
+}
+
+.account-info p {
+    margin-top:10px ;
+}
+
+.account-info, .account-settings {
+    padding: 10px;
+    color: #333;
+    flex: 1;
+}
+
+.account-settings ul {
+    list-style: none;
+}
+
+.account-settings li {
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.account-settings li:hover {
+    color: #A95DA3;
+}
+
+/* Delete Account */
+.delete-account {
+    text-align: right;
+    margin-top: 20px;
+}
+
+.delete-account-link {
+    color: #f44336;
+    text-decoration: none;
+    font-weight: bold;
+}

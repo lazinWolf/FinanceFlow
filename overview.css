@@ -1,0 +1,108 @@
+/* Global Styles */
+body {
+    font-family: "Lato", sans-serif;
+    background: linear-gradient(to bottom, #f0f4f8, #b29bc8); /* Updated gradient for more contrast */
+    margin: 0;
+    color: #333;
+}
+
+/* Content Area */
+.content {
+    padding: 20px;
+}
+
+/* Heading Styles */
+h1, h2, h3 {
+    font-weight: 700;
+    color: #333;
+}
+
+/* Heading Styles */
+h1 {
+    font-size: 2.8em;
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 20px;
+    font-weight: 700;
+    color: #333;
+    background: linear-gradient(to right, #8e44ad, #3498db);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; /* Gradient Text Effect */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2); /* Subtle Shadow */
+    letter-spacing: 1px;
+}
+
+/* Optional Underline */
+h1::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(to right, #8e44ad, #3498db);
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+
+h2 {
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+/* Summary and Insights Cards */
+.summary-cards, .insights-section {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+/* Card Styles */
+.card, .insight-card {
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    margin: 0 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hover effect */
+    border: 1px solid #ddd; /* Subtle border */
+}
+
+/* Card Colors */
+.card-balance { background-color: #e0f7fa; }
+.card-income { background-color: #fff9c4; }
+.card-credit { background-color: #ffebee; }
+.top-spending-categories { background-color: #ffecb3; }
+.goals-summary { background-color: #d1c4e9; }
+.savings-growth { background-color: #d1f2eb; }
+
+/* Hover Effect for Cards */
+.card:hover, .insight-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25); /* Darker shadow for more emphasis */
+}
+
+/* Charts Section */
+.charts-section {
+    display: flex;
+    justify-content: space-between;
+}
+
+.chart {
+    flex: 1;
+    margin: 0 10px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd; /* Consistent border for charts */
+}
+

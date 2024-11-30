@@ -1,0 +1,20 @@
+[
+    {
+        "goalName": "Emergency Fund",
+        "targetAmount": 250000.00,
+        "currentSavings": 80000.00,
+        "targetDate": "2024-12-31"
+    },
+    {
+        "goalName": "Vacation",
+        "targetAmount": 3000.00,
+        "currentSavings": 3000.00,
+        "targetDate": "2024-06-30"
+    },
+    {
+        "goalName": "New Car",
+        "targetAmount": 1500000.00,
+        "currentSavings": 150000.00,
+        "targetDate": "2025-12-31"
+    }
+]

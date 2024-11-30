@@ -1,0 +1,95 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+}
+
+
+/* Budget Page Layout */
+.budget-container {
+    padding: 20px;
+}
+
+.budget-overview, .category-budget, .add-budget {
+    background-color: white;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.budget-overview h2, .category-budget h2, .add-budget h2 {
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.overview-cards {
+    display: flex;
+    gap: 20px;
+}
+
+.card {
+    background-color: #E3E3E3;
+    padding: 20px;
+    flex: 1;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.card h3 {
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.card p {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.category-budget table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.category-budget th, .category-budget td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: center;
+}
+
+.category-budget th {
+    background-color: #a95da3cc;
+    color: white;
+}
+
+.add-budget form {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.add-budget input, .add-budget button {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+}
+
+.add-budget button {
+    background-color: #a95da3cc;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.add-budget button:hover {
+    background-color: #a95da3f4;
+}

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dashboard.css">
+    <title>FinanceFlow - Dashboard</title>
+</head>
+<body>
+
+    <header class="header">
+        <!-- Logo Section -->
+        <div class="logo">
+            <a href="index.html"><img src="images/logo.png" alt="FinanceFlow Logo"></a>
+        </div>
+    
+        <!-- Centered Navigation Buttons -->
+        <div class="nav-center">
+            <h1 class="dashboard-heading">Dashboard</h1>
+        </div>
+    
+        <!-- Profile and Notification Icons -->
+        <div class="header-icons">
+            <a href="notification.html"><img src="images/notification.png" alt="Notifications" class="icon n"></a>
+            <a href="profile.html"><img src="images/profile.png" alt="Profile" class="icon p"></a>
+        </div>
+    </header>
+    
+
+    <!-- Main Layout -->
+    <div class="dashboard-container">
+        
+        <!-- Left Sidebar (Navigation) -->
+        <nav class="sidebar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="overview.html">Overview</a></li>
+                <li><a href="expenses.html">Expenses</a></li>
+                <li><a href="bills.html">Bills</a></li>
+                <li><a href="goals.html">Goals</a></li>
+                <li><a href="income.html">Income</a></li>
+                <li><a href="report.html">Report</a></li>
+                <li><a href="budget.html">Budget</a></li>
+                <li><a href="analytics.html">Analytics</a></li>
+                <li><a href="target.html">Target</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="support.html">Support</a></li>                
+            </ul>
+        </nav>
+
+        <!-- Main Content Area -->
+        <div class="main-content">
+            <div class="tabs">
+                <a href="overview.html"><button class="tab overview active">Overview</button></a>
+                <a href="income.html"><button class="tab income">Income</button></a>
+                <a href="expenses.html"><button class="tab expenses">Expenses</button></a>
+                <a href="bills.html"><button class="tab bills">Bills</button></a> <!-- Bills tab added here -->
+                <a href="goals.html"><button class="tab goals">Goals</button></a>
+            </div>
+            
+
+            <!-- Content Window -->
+            <div class="content-window">
+                <h2>Financial Overview</h2>
+                <canvas id="dashboardChart" width="400" height="200"></canvas>
+                <a href="#" id="fullPageLink" class="full-page-link">Go to Full Page</a>
+            </div>            
+        </div>
+
+        <!-- Right Sidebar (Quick View) -->
+        <aside class="quick-links">
+            <h3>Recent Expenses</h3>
+            <!-- Space for Recent Transactions -->
+
+            <h3>Upcoming Bills</h3>
+            <!-- Space for Upcoming Bills -->
+
+            <h3>Goal Reminders</h3>
+            <!-- Space for Goal Reminders -->
+        </aside>
+    </div>
+
+    <!-- Savings Tips Section -->
+    <section class="savings-tips">
+        <h3>Financial Tips & Insights</h3>
+        <div class="tip-navigation">
+            <button class="arrow left-arrow">←</button>
+            <div class="tip-card" id="tip-content">
+                💡 You’ve been spending 20% more on dining this month. Consider cutting down to reach your savings goals.
+            </div>
+            <button class="arrow right-arrow">→</button>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="dashboard.js"></script>
+</body>
+</html>
