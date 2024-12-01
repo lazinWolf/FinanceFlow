@@ -1,0 +1,21 @@
+<header class="header">
+    <div class="logo">
+        <a href="/index">
+            <img src="images/logo.png" alt="FinanceFlow Logo">
+        </a>
+    </div>
+    <nav class="navbar">
+        <a href="/dashboard" class="nav-btn <%= activePage === 'dashboard' ? 'active' : '' %>">Dashboard</a>
+        <a href="/overview" class="nav-btn <%= activePage === 'overview' ? 'active' : '' %>">Overview</a>
+        <a href="/expenses" class="nav-btn <%= activePage === 'expenses' ? 'active' : '' %>">Expenses</a>
+        <a href="/goals" class="nav-btn <%= activePage === 'goals' ? 'active' : '' %>">Goals</a>
+        <a href="/bills" class="nav-btn <%= activePage === 'bills' ? 'active' : '' %>">Bills</a>
+        <a href="/income" class="nav-btn <%= activePage === 'income' ? 'active' : '' %>">Income</a>
+        <a href="/report" class="nav-btn <%= activePage === 'report' ? 'active' : '' %>">Report</a>
+        <a href="/analytics" class="nav-btn <%= activePage === 'analytics' ? 'active' : '' %>">Analytics</a>
+    </nav>
+    <div class="header-icons">
+        <a href="/notification"><img src="images/notification.png" alt="Notifications" class="icon"></a>
+        <a href="/profile"><img src="images/profile.png" alt="Profile" class="icon"></a>
+    </div>
+</header>

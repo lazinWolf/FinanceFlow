@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FinanceFlow - Goals</title>
+
+    <link rel="stylesheet" href="goals.css">
+    <link rel="stylesheet" href="header.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <%- include('header', { activePage: 'goals' }) %>
+    
+
+    <div class="dashboard-container">
+
+        <!-- Main Content Area -->
+        <div class="main-content">
+            <h1 class="page-title">Goals</h1>
+
+            <!-- Goals Summary Section -->
+            <section class="goals-summary-section">
+                <h2>Goals Overview</h2>
+                <div class="goals-summary-cards">
+                    <div class="summary-card">
+                        <h3>Total Goals</h3>
+                        <p id="totalGoals">0</p>
+                    </div>
+                    <div class="summary-card">
+                        <h3>Completed Goals</h3>
+                        <p id="completedGoals">0</p>
+                    </div>
+                    <div class="summary-card">
+                        <h3>Active Goals</h3>
+                        <p id="activeGoals">0</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Search and Filter Options -->
+            <section class="search-filter-section">
+                <input type="text" id="goalSearch" placeholder="Search goals..." aria-label="Search goals by name">
+                <select id="goalStatusFilter" aria-label="Filter goals by status">
+                    <option value="all">All</option>
+                    <option value="active">Active</option>
+                    <option value="completed">Completed</option>
+                </select>
+
+                <!-- Sort Dropdown -->
+                <div class="sort-dropdown">
+                    <label for="sortOptions">Sort By:</label>
+                    <select id="sortOptions">
+                        <option value="dateAsc">Date (Ascending)</option>
+                        <option value="dateDesc">Date (Descending)</option>
+                        <option value="categoryAsc">Category (A-Z)</option>
+                        <option value="categoryDesc">Category (Z-A)</option>
+                        <option value="amountAsc">Amount (Low to High)</option>
+                        <option value="amountDesc">Amount (High to Low)</option>
+                    </select>
+                </div>
+            </section>
+
+            <!-- Goals List Section -->
+            <section class="goals-list-section">
+                <h2>Your Goals</h2>
+                <table id="goalsTable">
+                    <thead>
+                        <tr>
+                            <th>Goal Name <i class="fas fa-sort"></i></th>
+                            <th>Target Amount (₹) <i class="fas fa-sort"></i></th>
+                            <th>Current Savings (₹) <i class="fas fa-sort"></i></th>
+                            <th>Target Date <i class="fas fa-sort"></i></th>
+                            <th>Progress</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Table rows populated by JavaScript -->
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- Add Goal Form Section -->
+            <section class="add-goal-section">
+                <h2>Add New Goal</h2>
+                <form id="addGoalForm">
+                    <div class="form-group">
+                        <label for="goalName">Goal Name:</label>
+                        <input type="text" id="goalName" name="goalName" placeholder="e.g., Buy a Car" required aria-label="Enter goal name">
+                    </div>
+                    <div class="form-group">
+                        <label for="targetAmount">Target Amount (₹):</label>
+                        <input type="number" id="targetAmount" name="targetAmount" step="0.01" min="0" required aria-label="Enter target amount">
+                    </div>
+                    <div class="form-group">
+                        <label for="currentSavings">Current Savings (₹):</label>
+                        <input type="number" id="currentSavings" name="currentSavings" step="0.01" min="0" value="0" required aria-label="Enter current savings amount">
+                    </div>
+                    <div class="form-group">
+                        <label for="targetDate">Target Date:</label>
+                        <input type="date" id="targetDate" name="targetDate" required aria-label="Enter target date">
+                    </div>
+                    <button type="submit" class="add-btn" aria-label="Add new goal">Add Goal</button>
+                </form>
+            </section>
+        </div>
+    </div>
+
+    <script src="goals.js"></script>
+</body>
+</html>

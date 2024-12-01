@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="profile.css">
+    <link rel="stylesheet" href="header.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <title>FinanceFlow - Profile</title>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header class="header">
+        <div class="logo">
+            <a href="/">
+                <img src="images/logo.png" alt="FinanceFlow Logo">
+            </a>
+        </div>
+        <nav class="navbar">
+            <a href="/dashboard" class="nav-btn">Dashboard</a>
+            <a href="/overview" class="nav-btn">Overview</a>
+            <a href="/expenses" class="nav-btn">Expenses</a>
+            <a href="/goals" class="nav-btn">Goals</a>
+            <a href="/bills" class="nav-btn">Bills</a>
+            <a href="/income" class="nav-btn">Income</a>
+            <a href="/report" class="nav-btn">Report</a>
+            <a href="/analytics" class="nav-btn">Analytics</a> <!-- Example of active class -->
+        </nav>
+        <div class="header-icons">
+            <a href="/notification"><img src="images/notification.png" alt="Notifications" class="icon n"></a>
+            <a href="/profile"><img src="images/profile.png" alt="Profile" class="icon p activeicon"></a>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <div class="main-container">
+
+        <!-- Left Sidebar (User Profile) -->
+        <aside class="profile-sidebar">
+            <div class="profile-photo">
+                <img src="images/profile-pic.png" alt="Profile Picture" class="profile-img">
+            </div>
+            <div class="user-details">
+                <p><strong>Name:</strong> <br>Jake W. Grant</p>
+                <p><strong>Email:</strong> <br>jakewsimmons13@gmail.com</p>
+                <p><strong>Phone No.:</strong> <br>555 123 4567</p>
+                <p><strong>Birth Date:</strong> <br>13-7-1995</p>
+            </div>
+            <button class="edit-profile-btn"> Edit Profile</button>
+        </aside>
+
+        <!-- Right Section (Account Info and Financial Overview) -->
+        <section class="main-content">
+
+            <!-- Financial Overview Section -->
+            <div class="financial-overview">
+                <h2>Financial Overview</h2>
+                <div class="overview-cards">
+                    <button class="card expense-summary">Expense Summary</button>
+                    <button class="card savings-goals">Savings Goals</button>
+                    <button class="card budget">Budget</button>
+                    <button class="card upcoming-bills">Upcoming Bills</button>
+                </div>
+            </div>
+
+            <!-- Account Info and Settings Section -->
+            <div class="account-info-settings">
+                <div class="account-info">
+                    <h2>Account Info</h2>
+                    <p><strong>Name</strong> <br>Jake Wesley Grant</p>
+                    <p><strong>Email</strong> <br>jakewsimmons13@gmail.com</p>
+                    <p><strong>Phone No.</strong> <br>555 123 4567</p>
+                    <p><strong>Gender</strong> <br>Male</p>
+                </div>
+                
+                <div class="account-settings">
+                    <h2>Account Settings</h2>
+                    <ul>
+                        <li>Security and Privacy</li>
+                        <li>Change Password</li>
+                        <li>Two Factor Authentication</li>
+                        <li>Notifications</li>
+                        <li>Switch to Public Profile</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Delete Account Option -->
+            <div class="delete-account">
+                <a href="#" class="delete-account-link">Delete Account</a>
+            </div>
+
+        </section>
+
+    </div>
+
+</body>
+</html>
