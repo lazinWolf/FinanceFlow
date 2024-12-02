@@ -1,46 +1,76 @@
-document.getElementById('signUpButton').addEventListener('click', async () => {
-    const fullName = document.getElementById('full-name').value;
-    const email = document.getElementById('email').value;
-    const phone = document.getElementById('phone').value;
-    const password = document.getElementById('password').value;
+// signup.js
+// Get form and elements 
+const form = document.getElementById("signUpForm");
+const fullNameInput = document.getElementById("full-name");
+const emailInput = document.getElementById("email");
+const phoneInput = document.getElementById("phone");
+const passwordInput = document.getElementById("password");
+const popup = document.getElementById("popup");
+const popupMessage = document.getElementById("popupMessage");
+const signUpButton = document.getElementById("signUpButton");
 
-    // Validate input (basic example)
-    if (!fullName || !email || !phone || !password) {
-        showPopup('Please fill all fields');
-        return;
-    }
+// Event listener for the sign-up button
+signUpButton.addEventListener("click", async function(event) {
+    // Prevent form submission behavior
+    event.preventDefault();
 
-    try {
-        const response = await fetch('http://localhost:5000/auth/signup', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ fullName, email, phone, password }),
-        });
+    const fullName = fullNameInput.value;
+    const email = emailInput.value;
+    const phone = phoneInput.value;
+    const password = passwordInput.value;
 
-        const data = await response.json();
+    // Validate if all fields are filled
+    if (fullName === "" || email === "" || phone === "" || password === "") {
+        alert("Please fill in all fields.");
+    } else if (password.length < 6) {
+        alert("Password must be at least 6 characters long.");
+    } else {
+        try {
+            // Make API call to signup endpoint
+            const response = await fetch('/api/auth/signup', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ fullName, email, phone, password })
+            });
 
-        if (response.ok) {
-            showPopup('Sign Up Successful!');
-            setTimeout(() => {
-                window.location.href = '/login'; // Redirect to login page
-            }, 2000);
-        } else {
-            showPopup(data.message || 'Sign Up Failed');
+            if (response.ok) {
+                // Signup successful
+                showPopup("Sign Up Successful!");
+
+                // Wait for the popup to appear, then redirect to dashboard
+                setTimeout(function() {
+                    window.location.href = "/login"; 
+                }, 2000); 
+
+            } else {
+                // Handle error response
+                const errorData = await response.json(); 
+                alert(`Signup failed: ${errorData.message}`); 
+            }
+
+        } catch (error) {
+            console.error("Error during signup:", error);
+            alert("An error occurred during signup.");
         }
-    } catch (error) {
-        showPopup('An error occurred. Please try again.');
-        console.error(error);
     }
 });
 
-// Helper function to display popups
+// Function to show the popup
 function showPopup(message) {
-    const popup = document.getElementById('popup');
-    const popupMessage = document.getElementById('popupMessage');
     popupMessage.textContent = message;
-    popup.style.display = 'block';
+    popup.style.display = "block";
 }
 
+// Function to close the popup
 function closePopup() {
-    document.getElementById('popup').style.display = 'none';
+    popup.style.display = "none";
+}
+
+// Close popup if clicked outside
+window.onclick = function(event) {
+    if (event.target === popup) {
+        closePopup();
+    }
 }
